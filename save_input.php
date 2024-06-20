@@ -1,12 +1,13 @@
 <?php
 // Check if input is provided
 if ($argc < 2) {
-    echo "Usage: php save_input.php <input>\n";
-    exit(1);
+    // Prompt the user to enter input
+    echo "No input provided. Please enter the input: ";
+    $input = trim(fgets(STDIN)); // Read input from the user
+} else {
+    // Get input from command line argument
+    $input = $argv[1];
 }
-
-// Get input from command line argument
-$input = $argv[1];
 
 // Validate input (optional)
 // You can add more validation as needed
